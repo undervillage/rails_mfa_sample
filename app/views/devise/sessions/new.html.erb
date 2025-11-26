@@ -1,0 +1,31 @@
+<h1>ログイン (パスワード + ワンタイムコード)</h1>
+
+<%= form_with model: resource, url: session_path(resource_name), data: { turbo: false } do |f| %>
+  <div>
+    <%= f.label :email %><br>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <div>
+    <%= f.label :otp_code, "ワンタイムコード" %><br>
+    <%= f.text_field :otp_code, autocomplete: "one-time-code" %>
+  </div>
+
+  <div>
+    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+  </div>
+
+  <div>
+    <%= f.submit "ログイン" %>
+  </div>
+<% end %>
+
+<p style="margin-top: 1rem;">
+  アカウントをお持ちでない場合は
+  <%= link_to "新規登録はこちら", new_user_registration_path %>
+</p>

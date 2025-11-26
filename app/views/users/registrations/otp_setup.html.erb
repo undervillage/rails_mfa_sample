@@ -1,0 +1,20 @@
+<h1>MFA 設定</h1>
+<p>Authenticator アプリで以下のQRコードを読み込んでください。</p>
+
+<div><%= raw @qr_svg %></div>
+
+<p>読み込み後、ワンタイムコードを2回連続（次の時間枠のコードまで待って）で入力してください。</p>
+
+<%= form_with url: otp_verify_path, method: :post, data: { turbo: false } do |f| %>
+  <div>
+    <%= label_tag :otp_code_1, "ワンタイムコード1" %><br>
+    <%= text_field_tag :otp_code_1 %>
+  </div>
+  <div>
+    <%= label_tag :otp_code_2, "ワンタイムコード2" %><br>
+    <%= text_field_tag :otp_code_2 %>
+  </div>
+  <div>
+    <%= submit_tag "確認する" %>
+  </div>
+<% end %>

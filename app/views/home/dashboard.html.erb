@@ -1,0 +1,5 @@
+<div class="page">
+  <h1>ダッシュボード</h1>
+  <p>ログイン中: <strong><%= current_user.email %></strong></p>
+  <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo_confirm: "ログアウトしますか？" }, class: "btn" %></p>
+</div>

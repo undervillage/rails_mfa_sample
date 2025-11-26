@@ -1,0 +1,14 @@
+# Exclude local development artifacts from the build context
+.git
+tmp
+log
+storage
+node_modules
+public/assets
+public/packs
+public/packs-test
+public/sitemap.xml.gz
+vendor/bundle
+.bundle
+coverage
+.byebug_history
