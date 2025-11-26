@@ -1,6 +1,7 @@
 # Rails MFA Sample
 
-Ruby 4.0 / Rails 8.1 + Devise + TOTP (MFA) のサンプルです。Docker Compose を前提にした最小構成で、サインアップ後にQRコードでMFAを登録し、連続2コード検証で完了するフローを持ちます。
+Ruby 4.0 / Rails 8.1 + Devise + TOTP (MFA) のサンプルです。諸々不足していますので、本番運用できる水準ではございません。  
+Docker Compose を前提にした最小構成で、サインアップ後にQRコードでMFAを登録し、連続2コード検証で完了するフローを持ちます。  
 
 ## 前提
 - Ruby 4.0.0.preview2
