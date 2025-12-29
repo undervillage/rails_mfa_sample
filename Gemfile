@@ -15,7 +15,7 @@ gem "devise"
 gem "rotp"
 gem "rqrcode"
 gem "image_processing", "~> 1.13"
-gem "bootsnap", "~> 1.18", require: false
+gem "bootsnap", "~> 1.20", require: false
 gem "tzinfo-data", platforms: %i[windows jruby]
 gem "net-imap"
 gem "net-pop"
